@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shoppingcart/component/color_icon.dart';
 
@@ -73,7 +74,9 @@ class BottomDetail extends StatelessWidget {
                       backgroundColor: Colors.deepOrange,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(context);
+                    },
                     child: Text(
                       "Add to Cart",
                       style: TextStyle(color: Colors.white),
@@ -84,6 +87,36 @@ class BottomDetail extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Future<dynamic> showDialog(BuildContext context) {
+    return showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        title: Text("제목"),
+        content: Text('내용'),
+        actions: [
+          CupertinoDialogAction(
+            child: Text(
+              "취소",
+              style: TextStyle(color: Colors.red),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          CupertinoDialogAction(
+            child: Text(
+              "확인",
+              style: TextStyle(color: Colors.blue),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
       ),
     );
   }
