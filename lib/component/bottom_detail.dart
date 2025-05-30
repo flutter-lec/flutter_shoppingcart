@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shoppingcart/components/color_icon.dart';
+import 'package:flutter_shoppingcart/component/color_icon.dart';
 
 class BottomDetail extends StatelessWidget {
   const BottomDetail({
