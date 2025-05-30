@@ -20,27 +20,28 @@ class BottomDetail extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text("Urban Soft AL 10.0"),
+                Text("Urban Soft AL 10.0", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                 Spacer(),
-                Text("\$699"),
+                Text("\$699", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
               ],
             ),
             SizedBox(height: 10),
             Row(
               children: [
-                Icon(Icons.star),
-                Icon(Icons.star),
-                Icon(Icons.star),
-                Icon(Icons.star),
-                Icon(Icons.star),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
                 Spacer(),
                 RichText(
                   text: TextSpan(
                     style: TextStyle(fontSize: 18),
                     children: [
                       TextSpan(text: "review"),
+                      WidgetSpan(child: SizedBox(width: 5)),
                       TextSpan(
-                        text: " (26)",
+                        text: "(26)",
                         style: TextStyle(color: Colors.blue),
                       ),
                     ],
@@ -53,10 +54,10 @@ class BottomDetail extends StatelessWidget {
             SizedBox(height: 10),
             Row(
               children: [
-                ColorIcon(rGap: 10),
-                ColorIcon(rGap: 10),
-                ColorIcon(rGap: 10),
-                ColorIcon(rGap: 10),
+                ColorIcon(rGap: 10, color: Colors.black),
+                ColorIcon(rGap: 10, color: Colors.green),
+                ColorIcon(rGap: 10, color: Colors.orange),
+                ColorIcon(rGap: 10, color: Colors.grey),
                 ColorIcon(),
               ],
             ),
@@ -65,14 +66,18 @@ class BottomDetail extends StatelessWidget {
               child: SizedBox(
                 width: double.infinity,
                 height: 40,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange,
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    "Add to Cart",
-                    style: TextStyle(color: Colors.white),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepOrange,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      "Add to Cart",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),

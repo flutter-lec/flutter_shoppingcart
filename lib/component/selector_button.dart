@@ -4,8 +4,9 @@ import 'package:flutter_shoppingcart/page/home_vm.dart';
 
 class SelectorButton extends ConsumerWidget {
   int id;
+  Widget icon;
 
-  SelectorButton({required this.id});
+  SelectorButton({required this.id, required this.icon});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -16,14 +17,14 @@ class SelectorButton extends ConsumerWidget {
       width: 70,
       height: 70,
       decoration: BoxDecoration(
-        color: model.isSelected(id) ? Colors.orange : Colors.grey,
+        color: model.isSelected(id) ? Colors.deepOrange : Colors.grey,
         borderRadius: BorderRadius.circular(20),
       ),
       child: IconButton(
         onPressed: () {
           vm.onClick(id);
         },
-        icon: Icon(Icons.directions_bike),
+        icon: icon,
       ),
     );
   }

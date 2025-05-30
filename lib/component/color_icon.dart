@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class ColorIcon extends StatelessWidget {
   double rGap;
+  Color color;
 
-  ColorIcon({this.rGap = 0.0});
+  ColorIcon({this.rGap = 0.0, this.color = Colors.white});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class ColorIcon extends StatelessWidget {
               child: Container(
                 width: 40,
                 height: 40,
-                decoration: BoxDecoration(color: Colors.black),
+                decoration: BoxDecoration(color: color),
               ),
             ),
           ),

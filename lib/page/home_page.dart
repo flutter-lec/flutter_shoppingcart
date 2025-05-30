@@ -20,10 +20,7 @@ class HomePage extends StatelessWidget {
 
   AppBar _appbar() {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {},
-        icon: Icon(Icons.arrow_back),
-      ),
+      leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
       actions: [
         IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
       ],
